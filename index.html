@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Time Range Selector</title>
+
+  <link rel="stylesheet" href="nouislider.min.css">
+  <link rel="stylesheet" href="trs.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="dribbble">
+      <div id="slider-limit"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="nouislider.min.js"></script>
+
+  <script>
+    var limitSlider = document.getElementById('slider-limit');
+
+    noUiSlider.create(limitSlider, {
+      start: [ 0, 35 ],
+      behaviour: 'drag',
+      connect: true,
+      range: {
+        'min': 0,
+        'max': 100
+      }
+    });
+  </script>
+
+</body>
+</html>

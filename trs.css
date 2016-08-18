@@ -1,5 +1,6 @@
 body{
   background: #f4f4f4;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .container{
@@ -39,7 +40,7 @@ body{
   width: 30px;
   height: 30px;
   left: -15px;
-  top: -7px;
+  top: -8px;
 }
 .noUi-handle{
   border: 0;
@@ -51,4 +52,25 @@ body{
 .noUi-handle:before,
 .noUi-handle:after{
   display: none;
+}
+
+/* noUi Custom tooltip */
+.noUi-tooltip{
+  color: #9b9bb1;
+  border: 0;
+  background: transparent;
+}
+.noUi-horizontal .noUi-handle-lower .noUi-tooltip,
+.noUi-horizontal .noUi-handle-upper .noUi-tooltip{
+  opacity: 0;
+  top: -40px;
+  bottom: inherit;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity .3s linear;
+}
+
+.noUi-horizontal .noUi-handle-lower.noUi-active .noUi-tooltip,
+.noUi-horizontal .noUi-handle-upper.noUi-active .noUi-tooltip{
+  opacity: 1;
 }

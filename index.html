@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Time Range Selector</title>
 
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="nouislider.min.css">
   <link rel="stylesheet" href="trs.css">
 </head>
@@ -16,6 +17,7 @@
   </div>
 
   <script type="text/javascript" src="nouislider.min.js"></script>
+  <script type="text/javascript" src="wNumb.js"></script>
 
   <script>
     var limitSlider = document.getElementById('trs-slider');
@@ -24,6 +26,7 @@
       start: [ 0, 70 ],
       behaviour: 'drag',
       connect: true,
+      tooltips: [ wNumb({ decimals: 2 }), wNumb({ decimals: 2 }) ],
       range: {
         'min': 0,
         'max': 100

@@ -2,10 +2,53 @@ body{
   background: #f4f4f4;
 }
 
+.container{
+  width: 100%;
+}
+
 .dribbble{
+  position: relative;
   width: 800px;
   height: 600px;
-  margin: 0 auto;
+  margin: 5% auto;
   background: #fff;
   border-radius: 2px;
+}
+
+#trs-slider{
+  top: 50%;
+  width: 80%;
+  margin: 0 auto;
+  transform: translateY(-50%);
+}
+
+/* noUi Custom theme */
+.noUi-connect{
+  background: #4846FD;
+  box-shadow: none;
+}
+.noUi-background{
+  box-shadow: none;
+  background: #fff;
+  border: 0;
+}
+.noUi-horizontal{
+  height: 16px;
+}
+.noUi-horizontal .noUi-handle{
+  width: 30px;
+  height: 30px;
+  left: -15px;
+  top: -7px;
+}
+.noUi-handle{
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, .15);
+  box-shadow: 0 2px 10px 1px rgba(0, 0, 0, .15);
+}
+.noUi-handle:before,
+.noUi-handle:after{
+  display: none;
 }

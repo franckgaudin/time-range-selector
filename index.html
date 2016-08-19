@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <title>Time Range Selector</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
   <link rel="stylesheet" href="nouislider.min.css">
   <link rel="stylesheet" href="trs.css">
+
 </head>
 <body>
 
@@ -16,6 +17,7 @@
     </div>
   </div>
 
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
   <script type="text/javascript" src="nouislider.min.js"></script>
   <script type="text/javascript" src="wNumb.js"></script>
 
@@ -26,12 +28,24 @@
       start: [ 0, 70 ],
       behaviour: 'drag',
       connect: true,
-      tooltips: [ wNumb({ decimals: 2 }), wNumb({ decimals: 2 }) ],
+      tooltips: [
+        wNumb({
+          decimals: 2
+        }),
+        wNumb({
+          decimals: 2
+        }) ],
       range: {
-        'min': 0,
-        'max': 100
+        'min': 00,
+        'max': 30
       }
     });
+
+    $( document ).ready(function() {
+        $( ".noUi-tooltip" ).after( "<div class='handle-mask'></div><div class='has-carret'></div>" );
+    });
+
+
   </script>
 
 </body>
